@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="PendingIntent"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonPendingIntentScanStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonPendingIntentScanStart" />
+
+    <Button
+        android:id="@+id/buttonPendingIntentScanStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="startScan"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPendingIntentScanStop"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textCount"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <Button
+        android:id="@+id/buttonPendingIntentScanStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stopScan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonPendingIntentScanStart" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="ScanCallback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonScanCallbackScanStart" />
+
+    <Button
+        android:id="@+id/buttonScanCallbackScanStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="startScan"
+        app:layout_constraintEnd_toStartOf="@+id/buttonScanCallbackScanStop"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPendingIntentScanStart" />
+
+    <Button
+        android:id="@+id/buttonScanCallbackScanStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stopScan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonScanCallbackScanStart" />
+
+    <Button
+        android:id="@+id/buttonResetCounters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Reset Counters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonScanCallbackScanStart" />
+
+    <Button
+        android:id="@+id/buttonBluetoothEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bluetooth Enable"
+        app:layout_constraintEnd_toStartOf="@+id/buttonBluetoothDisable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonResetCounters" />
+
+    <Button
+        android:id="@+id/buttonBluetoothDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bluetooth Disable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonBluetoothEnable"
+        app:layout_constraintTop_toBottomOf="@+id/buttonResetCounters" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
