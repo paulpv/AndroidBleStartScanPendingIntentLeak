@@ -32,4 +32,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation 'com.github.quickpermissions:quickpermissions-kotlin:0.4.0'
+        implementation 'com.github.paulpv:lib-android-scanner-compat:1.4.2'
 }
